@@ -45,10 +45,13 @@ INSERT INTO `Speaker` (`ID`, `Name`, `SessionId`) VALUES
 (1, 'Watson', 1),
 (2, 'Arnold', 1);
 
-create table test_task.allow_to_read_tables
+create table `allow_to_read_tables`
 (
     id int auto_increment primary key,
     `table` varchar(255) not null,
     constraint permissionsToRead_table_uindex unique (`table`)
 );
 
+INSERT INTO `allow_to_read_tables` (`table`) VALUES
+('News'),
+('Session');
