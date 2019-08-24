@@ -4,7 +4,6 @@
 require_once 'routes.php';
 
 use Responses\ErrorResponse;
-use Responses\SuccessfulResponse;
 
 $httpMethod = $_SERVER['REQUEST_METHOD'];
 $uri = $_SERVER['REQUEST_URI'];
