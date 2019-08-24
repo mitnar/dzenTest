@@ -20,7 +20,7 @@ class SessionController
 
     public function subscribe(): string
     {
-        if(!isset($_POST['sessionId']) || !isset($_POST['userEmail']))
+        if(!isset($_POST['sessionId']) || !isset($_POST['userEmail']) || !is_numeric($_POST['sessionId']))
             return json_encode(new ErrorResponse('Неверные входные данные'), JSON_UNESCAPED_UNICODE);
 
         try {
