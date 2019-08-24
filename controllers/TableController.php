@@ -19,7 +19,7 @@ class TableController {
 
     public function getRows(): string
     {
-        if(!isset($_POST['table']) || !isset($_POST['id']))
+        if(!isset($_POST['table']))
             return json_encode(new ErrorResponse('Неверные входные данные'), JSON_UNESCAPED_UNICODE);
 
         $table = $_POST['table'];
